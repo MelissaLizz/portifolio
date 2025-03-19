@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: "Inter", sans-serif;
+}
+
+/* Fundo e layout geral */
+body {
+    background-color: rgb(18, 1, 26);
+    color: rgb(236, 216, 255);
+    overflow-x: hidden;
+}
+
+/* Cabeçalho centralizado */
+header {
+    text-align: center;
+    padding: 30px 0;
+}
+
+/* Estilo do título do portfólio */
+.portfolio-title {
+    font-size: 36px;
+    margin-bottom: 20px; /* Aumentado para dar mais espaço */
+}
+
+/* Menu de navegação centralizado */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(236, 216, 255);
+    text-transform: uppercase;
+    font-size: 14px;
+    position: relative;
+}
+
+/* Efeito ao passar o mouse */
+nav ul li a::after {
+    content: "";
+    background-color: #541e8a;
+    height: 3px;
+    width: 0%;
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Seções dos temas */
+.tema-section {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    padding: 20px;
+}
+
+/* Caixa de conteúdo dentro de cada tema */
+.content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #240b36;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    text-align: center; /* Ajustado para centralizar o conteúdo */
+}
+
+/* Container das imagens (com rolagem horizontal) */
+.image-container {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
+/* Item de imagem com nome e descrição */
+.image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+    text-align: center;
+}
+
+/* Estilizando as imagens dentro do container */
+.image-item img {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Seções de contatos */
+.quadro1 {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    padding: 20px;
+}
+
+/* Caixa de conteúdo dentro de cada contato */
+.img-quadro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #240b36;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    text-align: center; /* Centralizado */
+}
+
+/* Estilizando as imagens dentro do container */
+.img-quadro img {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Estilização da descrição e do link */
+.text-box {
+    margin-top: 15px;
+    color: rgb(236, 216, 255);
+}
+
+.text-box p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.text-box a {
+    color: #9a5cf9;
+    font-weight: bold;
+    display: block;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .portfolio-title {
+        font-size: 28px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tema-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-box {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .image-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .image-item {
+        width: 100%;
+    }
+}
+
+/* Para telas grandes */
+@media (min-width: 1024px) {
+    .content-box {
+        width: 50%;
+    }
+
+    .image-container {
+        gap: 30px;
+    }
+}
